@@ -1,0 +1,14 @@
+package java_basics;
+
+public class ForLoop {
+	
+	public int countDiano() {
+		String countVal = null;
+		for(int i=0; i<100; i++) {
+			
+		}
+		return 0;
+	}
+
+
+}

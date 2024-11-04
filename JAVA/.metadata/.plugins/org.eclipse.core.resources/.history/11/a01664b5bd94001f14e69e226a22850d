@@ -1,0 +1,57 @@
+package java_basics;
+
+import java.util.Scanner;
+
+public class MainClass {
+
+    private static final String SWITCH_EXPRESSION = "switchExpression";
+    private static final String LOOPS = "loops";
+    private static final String ARRAYS = "arrays";
+
+    public static void main(String[] args) {
+        try (Scanner input = new Scanner(System.in)) {
+            System.out.println("Enter the Java Type ---- ");
+            String javaType = input.next();
+            Runnable action = handleJavaType(javaType, input);
+            action.run();  // Execute the method assigned to the `action` variable
+        }
+    }
+
+    private static Runnable handleJavaType(String javaType, Scanner input) {
+        return switch (javaType) {
+            case SWITCH_EXPRESSION -> () -> processSwitchExpression(input);
+            case LOOPS -> () -> processLoops(input);
+            case ARRAYS -> () -> processArrays(input);
+            default -> () -> System.out.println("Invalid Java Type entered.");
+        };
+    }
+
+    private static Object processArrays(Scanner input) {
+
+    	System.out.println("Declare and initialize an array .. ");
+    	
+    	
+    	return null;
+	}
+
+	private static void processSwitchExpression(Scanner input) {
+        System.out.println("Enter the name -- ");
+        String name = input.next();
+        System.out.println(SwitchExpression.getNumOfLetters(name));
+
+        System.out.println("Enter the day -- ");
+        String day = input.next();
+        System.out.println(SwitchExpression.getDayType(day));
+    }
+
+    private static void processLoops(Scanner input) {
+        System.out.println("Enter the type of loop");
+        String loop = input.next();
+
+        if ("for".equalsIgnoreCase(loop)) {
+            new ForLoop().countDiano();
+        } else {
+            System.out.println("Invalid loop type.");
+        }
+    }
+}

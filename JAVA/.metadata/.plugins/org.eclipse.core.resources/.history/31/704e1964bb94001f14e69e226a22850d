@@ -1,0 +1,27 @@
+package java_basics;
+
+public class SwitchExpression {
+
+    public static String getDayType(String day) {
+        // Switch expression with Java 17 for day type categorization
+        return switch (day.toUpperCase()) {
+            case "MONDAY", "TUESDAY", "WEDNESDAY", "THURSDAY", "FRIDAY" -> "Weekday";
+            case "SATURDAY", "SUNDAY" -> "Weekend";
+            default -> throw new IllegalArgumentException("Invalid day: " + day);
+        };
+    }
+
+    public static int getNumOfLetters(String name) {
+        // Switch expression for determining the length based on name category
+        int numOfLetters = switch (name) {
+            case "Jane", "Shan", "Amit", "Manu" -> 4;
+            case "Ashin", "Mebin", "Sebin" -> 5;
+            case "Sharun", "Alison", "Balaji" -> 6;
+            default -> {
+                System.out.println("Unrecognized name -- " + name);
+                yield -1; // Use 'yield' to return a value from the default block
+            }
+        };
+        return numOfLetters;
+    }
+}

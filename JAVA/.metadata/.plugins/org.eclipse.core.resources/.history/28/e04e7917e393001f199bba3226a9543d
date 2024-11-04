@@ -1,0 +1,8 @@
+package java_basics;
+
+	
+	public int countDiano() {
+		return 0;
+	}
+
+}

@@ -1,0 +1,12 @@
+package java_basics;
+
+import java.util.Arrays;
+
+public class Arrays {
+	
+	public static void singleDimensionalArray() {
+		String[] days = {"Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"};
+		System.out.println(DataArrays.toString(days));
+	}
+
+}

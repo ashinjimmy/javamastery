@@ -1,0 +1,9 @@
+package java_basics;
+
+public class ForLoop {
+	
+	public int countDiano() {
+		return 0;
+	}
+
+}

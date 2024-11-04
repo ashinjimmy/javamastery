@@ -1,0 +1,15 @@
+package java_basics;
+
+public class ForLoop {
+	
+	public String countDiano() {
+		String countVal = null;
+		System.out.println("**********");
+		for(int i=0; i<100; i++) {
+			countVal = "Diano"+i;
+		}
+		return countVal;
+	}
+
+
+}
