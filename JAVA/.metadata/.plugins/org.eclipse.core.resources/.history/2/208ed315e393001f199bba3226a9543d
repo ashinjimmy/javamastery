@@ -1,9 +1,0 @@
-package java_basics;
-
-public class for_loop {
-	
-	public int countDiano() {
-		return 0;
-	}
-
-}
