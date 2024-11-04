@@ -1,18 +1,25 @@
 package com.mastery.javabasics;
 
+/**
+ * Main class to demonstrate the functionality of the DataArrays class.
+ */
 public class MainClass {
 
-	public static void main(String[] args) {
-		
-		//DataArrays.printSingleDimensionalArray();
-		// since the method is static, it can be invoked directly using class name.
+    public static void main(String[] args) {
+        // Demonstrate single-dimensional array printing
+        DataArrays.printSingleDimensionalArray();
 
-		//new DataArrays().printTwoDimensionalArray();
-		// the method isn't static, so to access the data need to invoke the method
-		// through instance.
-		
-		int[] intArray = {100,30,450,25,60};
-		DataArrays.sortArray(intArray);
-	}
+        // Create an instance of DataArrays to demonstrate two-dimensional array printing
+        DataArrays dataArrays = new DataArrays();
+        dataArrays.printTwoDimensionalArray();
 
+        // Define an integer array for sorting and searching
+        int[] intArray = { 100, 30, 450, 25, 60 };
+
+        // Sort the array and perform binary search
+        DataArrays.sortAndSearchArray(intArray);
+
+        // Print maximum and minimum values from the integer array
+        dataArrays.printMaxAndMinElements(intArray);
+    }
 }
