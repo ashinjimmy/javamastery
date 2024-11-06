@@ -1,6 +1,7 @@
 package com.mastery.javabasics;
 
 import java.util.Arrays;
+import java.util.HashSet;
 
 /**
  * A class that demonstrates operations on single-dimensional and two-dimensional arrays.
@@ -87,4 +88,18 @@ public class DataArrays {
         System.out.println("Maximum value: " + maxValue);
         System.out.println("Minimum value: " + minValue);
     }
+    
+    
+    public static void inetersectionOfArrays(int[] a1, int[] a2) {
+    	HashSet<Integer> set = new HashSet<>();
+    	for(int i=0; i<a1.length; i++) {
+    		for(int j=0; j<a2.length; j++) {
+    			if(a1[i] == a2[j]) {
+    				set.add(a1[i]);
+    			}
+    		}
+    	}
+    	System.out.println(set);
+    }
+    
 }
