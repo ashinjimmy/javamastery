@@ -1,7 +1,12 @@
 package com.mastery.javabasics;
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collection;
+import java.util.Collections;
 import java.util.HashSet;
+import java.util.Iterator;
+import java.util.List;
 
 /**
  * A class that demonstrates operations on single-dimensional and two-dimensional arrays.
@@ -90,16 +95,45 @@ public class DataArrays {
     }
     
     
-    public static void inetersectionOfArrays(int[] a1, int[] a2) {
-    	HashSet<Integer> set = new HashSet<>();
-    	for(int i=0; i<a1.length; i++) {
-    		for(int j=0; j<a2.length; j++) {
-    			if(a1[i] == a2[j]) {
-    				set.add(a1[i]);
-    			}
-    		}
-    	}
-    	System.out.println(set);
+ // Method to find intersection of two arrays
+    public static void intersectionOfArrays(int[] a1, int[] a2) {
+        // Use HashSet to store unique elements from first array
+        HashSet<Integer> setA1 = new HashSet<>();
+        for (int num : a1) {
+            setA1.add(num);
+        }
+
+        // Use HashSet to store the intersection
+        HashSet<Integer> intersectionSet = new HashSet<>();
+        for (int num : a2) {
+            // Check if element from second array exists in first set
+            if (setA1.contains(num)) {
+                intersectionSet.add(num);
+            }
+        }
+
+        // Output the intersection set
+        System.out.println("Intersection Set: " + intersectionSet);
     }
-    
+
+    // Method to find union of multiple arrays and sort the result
+    public static void unionOfMultipleArrays(int[]... arrays) {
+        // Using HashSet to store unique elements from all arrays
+        HashSet<Integer> unionSet = new HashSet<>();
+        for (int[] array : arrays) {
+            for (int element : array) {
+                unionSet.add(element);
+            }
+        }
+
+        // Print the union set
+        System.out.println("Union Set: " + unionSet);
+
+        // Convert HashSet to ArrayList and sort it
+        ArrayList<Integer> sortedList = new ArrayList<>(unionSet);
+        Collections.sort(sortedList);
+
+        // Print the sorted list
+        System.out.println("Sorted List: " + sortedList);
+    }
 }

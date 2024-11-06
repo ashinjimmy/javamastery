@@ -25,7 +25,14 @@ public class MainClass {
         // Intersection of two array
         int[] ar1 = { 10, 30, 45, 25, 60 };
         int[] ar2 = { 100, 45, 73, 35, 60 };
-        DataArrays.inetersectionOfArrays(ar1, ar2);
+        //DataArrays.inetersectionOfArrays(ar1, ar2);
+        
+        
+        int[] s1 = {10,2,6,9,4,5};
+        int[] s2 = {2,6,1,8,7,11};
+        int[] s3 = {20,12,26,59,54,45};
+        int[] s4 = {22,63,14,82,72,11};
+        DataArrays.unionOfMultipleArrays(s1,s2,s3,s4);
 
     }
 }
