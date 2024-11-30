@@ -11,11 +11,11 @@ public class ReverseString {
 	private static String reverseString(String word) {
 		char[] wordArray = word.toLowerCase().trim().toCharArray();
 		int start = 0;
-		int end = wordArray.length;
+		int end = wordArray.length-1;
 		while(start < end) {
 			char temp = wordArray[start];
-			wordArray[start] = wordArray[end-1];
-			wordArray[end-1] = temp;
+			wordArray[start] = wordArray[end];
+			wordArray[end] = temp;
 			start++;
 			end--;
 		}
