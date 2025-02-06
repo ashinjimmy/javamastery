@@ -6,7 +6,7 @@ import java.util.List;
 public class AllPossibleSubstrings {
 
 	public static void main(String[] args) {
-		String input = "AmentaAshin";
+		String input = "Amenta+Ashin";
 		allPossibleSubstrings(input);
 	}
 
